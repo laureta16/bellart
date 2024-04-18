@@ -343,7 +343,6 @@ ol {
   display: inline-block;
   margin-right: 30px;
   position: relative;
-  margin-top: 5%;
 }
 
 .nav-menu ul li:last-child {
@@ -430,7 +429,6 @@ ol {
   cursor: pointer;
   float: right;
   margin: 19px 0 16px;
-  margin-top: 4%;
 }
 
 .slicknav_menu {
