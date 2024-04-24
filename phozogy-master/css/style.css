@@ -409,18 +409,7 @@ ol {
   display: none;
 }
 
-.top-search {
-  font-size: 15px;
-  height: 50px;
-  width: 50px;
-  color: #ffffff;
-  background: #009603;
-  line-height: 50px;
-  text-align: center;
-  cursor: pointer;
-  float: right;
-  margin: 19px 0 16px;
-}
+
 
 .slicknav_menu {
   display: none;
