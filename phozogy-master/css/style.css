@@ -275,7 +275,7 @@ ol {
 }
 
 .nav-menu {
-  float: left;
+  float: right;
 }
 
 .nav-menu ul li {
@@ -313,7 +313,8 @@ ol {
   padding: 32px 8px 30px;
   position: relative;
   font-family: "Quantico", sans-serif;
-	margin-bottom: 60px;
+	margin-top: 50px;
+
 }
 
 .nav-menu ul li a:after {
@@ -2037,11 +2038,7 @@ ol {
   .header-section .container-fluid {
     position: relative;
   }
-  .top-search {
-    float: none;
-    position: absolute;
-    right: 50px;
-  }
+ 
   .logo {
     margin-right: 0;
   }
