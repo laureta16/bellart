@@ -283,7 +283,6 @@ ol {
   display: inline-block;
   margin-right: 30px;
   position: relative;
-	
 }
 
 .nav-menu ul li:last-child {
@@ -313,8 +312,7 @@ ol {
   padding: 32px 8px 30px;
   position: relative;
   font-family: "Quantico", sans-serif;
-	margin-top: 50px;
-
+  margin-top: 50px;
 }
 
 .nav-menu ul li a:after {
@@ -360,8 +358,6 @@ ol {
 .nav-menu ul li .dropdown li a:after {
   display: none;
 }
-
-
 
 .slicknav_menu {
   display: none;
@@ -492,6 +488,75 @@ ol {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+
+/*categories section here */
+
+.right-btn {
+  text-align: right;
+  padding-top: 24px;
+}
+
+.categories-slider.owl-carousel .owl-item.active .cs-item .cs-text h4 {
+  opacity: 1;
+}
+
+.categories-slider.owl-carousel .owl-item.active .cs-item .cs-text span {
+  opacity: 1;
+}
+
+.categories-slider.owl-carousel .owl-nav button {
+  font-size: 24px;
+  color: #ffffff;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  left: 30px;
+  top: 152px;
+}
+
+.categories-slider.owl-carousel .owl-nav button.owl-next {
+  left: auto;
+  right: 30px;
+}
+
+.cs-item {
+  text-align: center;
+  width: 100%;
+  background: #f5f5f5;
+}
+
+.cs-item .cs-pic {
+  height: 360px;
+}
+
+.cs-item .cs-text {
+  padding: 25px 0 22px;
+}
+
+.cs-item .cs-text h4 {
+  color: #111111;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.cs-item .cs-text span {
+  font-size: 17px;
+  color: #009603;
+  display: block;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 /*---------------------
@@ -1759,7 +1824,6 @@ ol {
     background-color: #111;
     width: 20px;
     height: 3px;
-		
   }
   .slicknav_nav {
     background: #111;
@@ -2038,7 +2102,7 @@ ol {
   .header-section .container-fluid {
     position: relative;
   }
- 
+
   .logo {
     margin-right: 0;
   }
