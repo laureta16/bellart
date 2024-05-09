@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100vw;
+  display: grid;
+  place-content: center;
+}
+
+/* Define custom properties */
+:root {
+  --gallery-height: 100vh;
+  --title-font-size: 58px;
+  --title-font-family: "Poppins", sans-serif;
+  --title-font-weight: 700;
+  --title-color: #141d24;
+  --title-transform: uppercase;
+  --title-margin: 0 0 16px;
+  --subtitle-margin: 0 0 8px;
+  --subtitle-color: rgba(var(--title-color), 0.7);
+  --subtitle-font-size: 18px;
+  --subtitle-font-family: "Poppins", sans-serif;
+  --subtitle-font-weight: 700;
+  --subtitle-transform: uppercase;
+  --description-margin: 0 0 16px;
+  --description-color: var(--title-color);
+  --description-font-size: 16px;
+  --description-font-family: "Poppins", sans-serif;
+  --description-font-weight: 400;
+  --link-color: var(--title-color);
+  --link-color-hover: darken(var(--link-color), 5%);
+  --link-font-size: 16px;
+  --link-font-family: "Poppins", sans-serif;
+  --link-font-weight: 400;
+  --link-transform: initial;
+}
+
+/* Apply custom properties to elements */
+.c-gallery__title {
+  margin: var(--title-margin);
+  color: var(--title-color);
+  font-size: var(--title-font-size);
+  font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight);
+  text-transform: var(--title-transform);
+}
+
+.c-gallery__subtitle {
+  margin: var(--subtitle-margin);
+  color: var(--subtitle-color);
+  font-size: var(--subtitle-font-size);
+  font-family: var(--subtitle-font-family);
+  font-weight: var(--subtitle-font-weight);
+  text-transform: var(--subtitle-transform);
+}
+
+.c-gallery__description {
+  margin: var(--description-margin);
+  color: var(--description-color);
+  font-size: var(--description-font-size);
+  font-family: var(--description-font-family);
+  font-weight: var(--description-font-weight);
+}
+
+.c-gallery__link {
+  color: var(--link-color);
+  font-size: var(--link-font-size);
+  font-family: var(--link-font-family);
+  font-weight: var(--link-font-weight);
+  text-transform: var(--link-transform);
+}
+
+/* Other styles omitted for brevity */
+
+.c-gallery {
+  display: grid;
+  grid-gap: 40px;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1.7fr;
+  }
+}
+
+.c-gallery__header {
+  padding: 20px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+
+  @media (min-width: 1024px) {
+    height: var(--gallery-height); /* Changed from $gallery-height */
+  }
+
+  .c-gallery__header-inner {
+    max-width: 400px;
+  }
+
+  .c-gallery__title {
+    margin: var(--title-margin);
+    color: var(--title-color);
+    font-size: var(--title-font-size);
+    font-family: var(--title-font-family);
+    font-weight: var(--title-font-weight);
+    text-transform: var(--title-transform);
+  }
+
+  .c-gallery__subtitle {
+    display: block;
+    margin: var(--subtitle-margin);
+    color: var(--subtitle-color);
+    font-size: var(--subtitle-font-size);
+    font-family: var(--subtitle-font-family);
+    font-weight: var(--subtitle-font-weight);
+    text-transform: var(--subtitle-transform);
+  }
+
+  .c-gallery__description {
+    margin: var(--description-margin);
+    color: var(--description-color);
+    font-size: var(--description-font-size);
+    font-family: var(--description-font-family);
+    font-weight: var(--description-font-weight);
+    line-height: 1.6;
+  }
+
+  .c-gallery__link {
+    position: relative;
+    align-items: center;
+    color: var(--link-color);
+    font-size: var(--link-font-size);
+    font-family: var(--link-font-family);
+    font-weight: var(--link-font-weight);
+    text-transform: var(--link-transform);
+
+    &:hover {
+      color: var(--link-color-hover);
+    }
+  }
+}
+
+.c-gallery__images {
+  height: var(--gallery-height); /* Changed from $gallery-height */
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  overflow: hidden;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.c-gallery__column {
+  animation: slide 50s linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.c-gallery--reverse {
+  animation-direction: reverse;
+}
+
+@keyframes slide {
+  to {
+    translate: 0 -50%;
+  }
+}
+
+.texto {
+  padding: 120px 40px;
+  line-height: 1.6;
+
+  .texto-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 36px;
+    font-size: 18px;
+  }
+}
